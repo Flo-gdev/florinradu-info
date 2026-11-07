@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Florin Radu</title>
+
+<style>
+body{
+    margin:0;
+    background:#111;
+    color:white;
+    font-family:Arial,sans-serif;
+}
+
+.header{
+    position:absolute;
+    top:20px;
+    left:20px;
+    right:20px;
+    display:flex;
+    justify-content:space-between;
+    z-index:10;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:bold;
+}
+
+.links a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+}
+
+.container{
+    display:flex;
+    height:100vh;
+}
+
+.left,.right{
+    flex:1;
+    background-size:cover;
+    background-position:center;
+}
+
+.left{
+    background-image:url("https://picsum.photos/1200/800");
+}
+
+.right{
+    background-image:url("https://picsum.photos/800/1200");
+}
+
+@media(max-width:768px){
+    .container{
+        flex-direction:column;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <div class="logo">Florin Radu</div>
+
+    <div class="links">
+        <a href="https://instagram.com/">Instagram</a>
+        <a href="https://wa.me/32123456789">WhatsApp</a>
+    </div>
+</div>
+
+<div class="container">
+    <div class="left"></div>
+    <div class="right"></div>
+</div>
+
+</body>
+</html>
