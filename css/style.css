@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+    color: white;
+    font-family: Arial, sans-serif;
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    background: #000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 50px;
+
+    border-bottom: 1px solid #333;
+}
+
+.logo {
+    height: 110px;
+    width: auto;
+
+    /* logo alb */
+    filter: invert(1);
+}
+
+.links a {
+    color: white;
+    text-decoration: none;
+
+    font-size: 18px;
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+.links a:hover {
+    opacity: 0.7;
+}
+
+/* =========================
+   BODY
+========================= */
+
+.content {
+
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 100px;
+
+    padding: 60px 40px;
+
+    background: #000;
+}
+
+.photo-frame {
+
+    border: 2px solid white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #666;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    transition: all 0.3s ease;
+}
+
+.photo-frame:hover {
+    transform: scale(1.02);
+}
+
+/* Landscape - orizontal */
+
+.landscape-frame {
+
+    width: 700px;
+    height: 467px;
+
+    /* activeaza cand ai prima poza */
+    /* background-image: url("../images/landscape/landscape1.jpg"); */
+}
+
+/* Portrait - vertical */
+
+.portrait-frame {
+
+    width: 467px;
+    height: 700px;
+
+    /* activeaza cand ai prima poza */
+    /* background-image: url("../images/portrait/portrait1.jpg"); */
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+
+    background: #000;
+
+    display: flex;
+    justify-content: flex-end;
+
+    gap: 35px;
+
+    padding: 25px 50px;
+
+    border-top: 1px solid #333;
+}
+
+.footer a {
+
+    color: #d6a04a;
+
+    text-decoration: none;
+
+    letter-spacing: 1px;
+
+    font-size: 16px;
+
+    transition: all 0.3s ease;
+}
+
+.footer a:hover {
+
+    color: #f2c06b;
+
+    text-shadow: 0 0 8px rgba(214, 160, 74, 0.5);
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 1100px) {
+
+    .header {
+
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    .content {
+
+        flex-direction: column;
+
+        gap: 40px;
+
+        padding: 40px 20px;
+    }
+
+    .landscape-frame {
+
+        width: 90vw;
+        height: 60vw;
+    }
+
+    .portrait-frame {
+
+        width: 70vw;
+        height: 105vw;
+    }
+
+    .footer {
+
+        justify-content: center;
+
+        padding: 20px;
+    }
+}
+
+
+/* =========================
+   LIGHTBOX
+========================= */
+
+.lightbox {
+
+    display: none;
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.95);
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 99999;
+}
+
+.lightbox img {
+
+    max-width: 92%;
+    max-height: 88%;
+
+    object-fit: contain;
+}
+
+#close-btn {
+
+    position: absolute;
+
+    top: 25px;
+    right: 40px;
+
+    color: white;
+
+    font-size: 48px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+#close-btn:hover {
+
+    opacity: 0.7;
+}
+
+#prev-btn,
+#next-btn {
+
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 60px;
+    height: 60px;
+
+    border: 1px solid rgba(255,255,255,0.2);
+
+    background: rgba(255,255,255,0.08);
+
+    color: white;
+
+    font-size: 34px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+#prev-btn:hover,
+#next-btn:hover {
+
+    background: rgba(255,255,255,0.18);
+}
+
+#prev-btn {
+
+    left: 40px;
+}
+
+#next-btn {
+
+    right: 40px;
+}
