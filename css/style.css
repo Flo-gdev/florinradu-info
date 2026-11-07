@@ -34,9 +34,6 @@ body {
 .logo {
     height: 110px;
     width: auto;
-
-    /* logo alb */
-    /*filter: invert(1);*/
 }
 
 .links a {
